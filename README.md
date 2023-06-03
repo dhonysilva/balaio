@@ -31,6 +31,16 @@ Para mais informações, consulte essa [`documentação`](https://docs.github.co
 
 ### Comandos no docker-compose
 
+Execute o build. Essa etapa irá construir a imagem.
+```
+docker-compose build
+````
+
+Em seguida o up para processar o conteiner.
+```
+docker-compose up
+````
+
 
 #### Nova aplicação
 
@@ -67,6 +77,18 @@ config :fazenda, Fazenda.Repo,
 ```
 
 `db` é o nome do service de banco de dados definido no `docker-compose`.
+
+Liste todos os conteineres em operação.
+```
+docker ps
+````
+
+Copie o Id do container dbt.
+
+Execute o comando abaixo para acessar o conteiner.
+```
+docker exec -it <container-id> /bin/bash
+````
 
 #### Novo banco de dados
 
